@@ -1,18 +1,3 @@
-<?php
-
-require_once('includes/init.inc.php');
-
-$year_start = 1971;
-$year_end = 2008;
-$table = "energy_supply";
-
-
-
-?>
-
-
-
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -39,28 +24,41 @@ $table = "energy_supply";
 <script>
 
 var data = new Array();
+data[0] = {
+	"AU": 100.0,
+	"AT": 10.9,
+	"BE": 0,
+	"CA": 15.3,
+	"CZ": 0.2,
+	"DK": 1.8,
+	"FI": 27.3,
+	"FR": 8.6,
+	"GB": 1000,
+};
 
+data[1] = {
+	"AU": 0,
+	"AT": 0,
+	"BE": 0,
+	"CA": 153.3,
+	"CZ": 0.2,
+	"DK": 0,
+	"FI": 237.3,
+	"FR": 0,
+	"GB": 0,
+};
 
-<?
-
-
-for($year=$year_start, $id=0; $year<=$year_end; $year++, $id++){
-
-	$sql  = "SELECT ";
-	$sql .= 	"tblCC.code, tblES.`{$year}` ";
-	$sql .= "FROM ";
-	$sql .= 	"{$table} tblES, country_codes tblCC ";
-	$sql .= "WHERE ";
-	$sql .= 	"lower(trim(tblES.country)) LIKE lower(trim(concat('%', tblCC.country, '%')))";
-
-	echo "data[{$id}] = { ";
-		SQL_to_JS_var::sql_to_jqvector_var($sql);
-	echo " };\n";
-
-}
-
-?>
-
+data[2] = {
+	"AU": 1000,
+	"AT": 1000,
+	"BE": 0,
+	"CA": 153.3,
+	"CZ": 0.2,
+	"DK": 0,
+	"FI": 237.3,
+	"FR": 0,
+	"GB": 0,
+};
 
 function load_map(dataId){
 	var loadData = data[dataId];
@@ -70,7 +68,7 @@ function load_map(dataId){
 		series: {
 			regions: [{
 				values: loadData,
-				scale: ['#e1e4f6', '#090c1f'],
+				scale: ['#baffba', '#043904'],
 				normalizeFunction: 'polynomial'
 			}]
 			},
@@ -81,9 +79,9 @@ function load_map(dataId){
 }
 
 
-var default_value = <?=$year_start;?>;
-var min_value = <?=$year_start;?>;
-var max_value = <?=$year_end;?>;
+var default_value = 0;
+var min_value = 0; // 1971;
+var max_value = 2 //2008;
 $(function() {
 	$( "#slider" ).slider({
 		value:default_value,
@@ -91,11 +89,11 @@ $(function() {
 		max: max_value,
 		step: 1,
 		slide: function( event, ui ) {
-			$( "#amount" ).val(ui.value );
-			load_map(ui.value-<?=$year_start;?>);
+			$( "#amount" ).val( "AB" + ui.value );
+			load_map(ui.value);
 		}
 	});
-	$( "#amount" ).val($( "#slider" ).slider( "value" ) );
+	$( "#amount" ).val( "CD" + $( "#slider" ).slider( "value" ) );
 });
 
 $(document).ready(function(){

@@ -13,9 +13,10 @@ class SQL_to_JS_var
 
 	public static function sql_to_jqvector_var($sql=""){
 		global $database;
+		$jvector_vars = NULL;
 		$result_set = self::find_by_sql($sql);
 		while ($row = $database->fetch_array($result_set)){
-			echo $row[0].":".$row[1].", ";
+			echo $row[1]!=NULL ? $row[0].":".$row[1].", " : NULL;
 		}
 	}
 }
