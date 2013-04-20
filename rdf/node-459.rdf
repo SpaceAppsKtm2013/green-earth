@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:site="http://en.openei.org/datasets/ns#">
+  <site:Dataset rdf:about="http://en.openei.org/datasets/node/459">
+    <site:dataset_Title>Summary World Wind Energy Data (from World on the Edge)</site:dataset_Title>
+    <site:dataset_Body>&lt;p style=&quot;margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Lucida Grande'&quot;&gt;This dataset presents summary information related to world wind energy. It is part of a supporting dataset for the book World On the Edge: How to Prevent Environmental and Economic Collapse by&amp;nbsp;Lester R. Brown, available from the&amp;nbsp;&lt;a href=&quot;http://www.earth-policy.org/&quot; title=&quot;Earth Policy website&quot; target=&quot;_blank&quot;&gt;Earth Policy Institute&lt;/a&gt;. This wind energy dataset includes the following cumulative installed wind power capacity datasets:&amp;nbsp;World (1980 - 2009); Top ten countries (1980 - 2009);&amp;nbsp;European Union (1998 - 2009); Offshore wind power capacity by country, 2009.&lt;/p&gt;</site:dataset_Body>
+    <site:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-03-23T22:00:32Z</site:created>
+    <site:changed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-04-01T16:44:05Z</site:changed>
+    <site:dataset_Data rdf:resource="http://en.openei.org/datasets/files/459/pub/book_wote_energy_wind.xls"/>
+    <site:dataset_Alt_access>http://www.earth-policy.org/datacenter/xls/book_wote_energy_wind.xls</site:dataset_Alt_access>
+    <site:dataset_Contributor_relationship>I accessed this dataset from a public site.</site:dataset_Contributor_relationship>
+    <site:dataset_Geographic_scope>World</site:dataset_Geographic_scope>
+    <site:dataset_Self_assessment>To complete the optional self assessment, please add comments to the following sections:&#13;
+&lt;ol&gt;&#13;
+&lt;li&gt;Scope/depth – What is the scope of the data? How detailed is it?&lt;/li&gt;&#13;
+&lt;li&gt;Completeness – Relative to the scope, how complete is the dataset? Completeness is the degree to which all required data is known and provided.&#13;
+  &lt;ul&gt;&#13;
+    &lt;li&gt;Do mandatory attributes have a required a value?        &#13;
+    &lt;/li&gt;&lt;li&gt;Do optional attributes have a value based on some set of conditions?&lt;/li&gt;&#13;
+    &lt;li&gt;Do inapplicable attributes (such as maiden name for a single male) have null values?&lt;/li&gt;&#13;
+    &lt;li&gt;Are data values missing, or in an unusable state?&lt;/li&gt;&#13;
+  &lt;/ul&gt;&#13;
+&lt;/li&gt;&lt;li&gt;Accuracy – Relative to the scope, how accurate is the dataset?&lt;/li&gt;&#13;
+Accuracy is the extent to which data are correct and certified free of error. It is the degree of correctness and precision with which information represents states of the real world. Accuracy refers to the difference between an estimate of a parameter and its true value.  In an open, web-based information commons, centralized procedures for assuring accuracy are not practical. Rather, OpenEI asks information providers to convince information consumers that their information is accurate by publishing data together with meta-information describing the circumstances of its creation as well as references that support verification of claims that are made.&#13;
+If a dataset contains data collected from an instrument, information about how and when the instrument was last calibrated could be included.&#13;
+&lt;li&gt;Representational consistency – Is the dataset consistent?&lt;/li&gt;&#13;
+Representational consistency is the extent to which data are represented by the same format across a dataset and data instances (values) within the dataset do not contradict each other.&#13;
+&lt;/ol&gt;&#13;
+</site:dataset_Self_assessment>
+    <site:dataset_Source_name>Earth Policy Institute</site:dataset_Source_name>
+    <site:dataset_Source_url rdf:resource="http://www.earth-policy.org/"/>
+    <site:dataset_Time_period>through 2009</site:dataset_Time_period>
+    <site:dataset_License_type>1</site:dataset_License_type>
+    <site:dataset_License_more_info>&quot;Reuse of our data is permitted. We merely ask that wherever it is listed, it be appropriately cited&quot;</site:dataset_License_more_info>
+    <site:dataset_Terms_conditions>I agree.</site:dataset_Terms_conditions>
+    <site:dataset_Level_of_review>Some Review</site:dataset_Level_of_review>
+    <site:dataset_Data_collection_method>Source: Compiled by Earth Policy Institute with world data from Janet L. Sawin, &quot;Wind Power Still Soaring,&quot; in Worldwatch Institute, Vital Signs 2007-2008 (New York: W. W. Norton &amp; Company, 2007); Global Wind Energy Council (GWEC), Global Wind 2009 Report (Brussels: 2010). Country data from Worldwatch Institute, Signposts 2001, CD-ROM (Washington, DC: 2001); Chinese Renewable Energy Industries Association (CREIA), China Wind Power Report 2007 (Beijing: China Environmental Science Press, 2007); American Wind Energy Association (AWEA), Global Wind Energy Market Report, (Washington, DC: 1999); GWEC, Global Wind 2009 Report, op. cit. this note; European Wind Energy Association (EWEA), Wind Energy - The Facts (Brussels: 1999 and 2004); François Demarcq, &quot;Perspectives in France for the Coming Ten Years:</site:dataset_Data_collection_method>
+  </site:Dataset>
+</rdf:RDF>

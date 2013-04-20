@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:site="http://en.openei.org/datasets/ns#">
+  <site:Dataset rdf:about="http://en.openei.org/datasets/node/487">
+    <site:dataset_Title>Contribution of Renewables to World Energy Supply (1971 - 2008)</site:dataset_Title>
+    <site:dataset_Body>&lt;p style=&quot;margin: 0px; font: 12px 'Lucida Grande';&quot;&gt;OECD Factbook 2010: Economic, Environmental and Social Statistics - ISBN 92-64-08356-1 - © OECD 2010. &lt;a href=&quot;http://www.oecd.org/document/0,3746,en_2649_201185_46462759_1_1_1_1,00.html&quot; title=&quot;Statistics from A to Z&quot; target=&quot;_blank&quot;&gt;Available directly from the OECD Statistics website (beta version).&lt;/a&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; font: 12px 'Lucida Grande';&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; font: 12px 'Lucida Grande';&quot;&gt;Presents the annual contribution of renewables to energy supply, as a percentage of total primary energy supply for the world, plus approximately 40 countries (1971 - 2008).&amp;nbsp;&lt;/p&gt;</site:dataset_Body>
+    <site:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-04-06T16:29:48Z</site:created>
+    <site:changed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-04-20T17:08:51Z</site:changed>
+    <site:dataset_Data rdf:resource="http://en.openei.org/datasets/files/487/pub/302010061P1T051.XLS"/>
+    <site:dataset_Alt_access>http://dx.doi.org/10.1787/825324676083</site:dataset_Alt_access>
+    <site:dataset_Contributor_relationship>I accessed this dataset from a public site.</site:dataset_Contributor_relationship>
+    <site:dataset_Contributor_relationship_>the User can upload up to 1,500 words or 2,000 cells (equivalent to 4 tables or graphs) provided that suitable acknowledgement of OECD as source and copyright owner is given. The User must link to the OECD page where the uploaded material was taken from;</site:dataset_Contributor_relationship_>
+    <site:dataset_Geographic_scope>World, Australia, Austria, Belgium, Canada, Czech Republic, Denmark, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Japan, Korea, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Poland Portugal, Slovak Republic, Spain, Sweden, Switzerland, Turkey, U.K., U.S., Brazil, Chile</site:dataset_Geographic_scope>
+    <site:dataset_Self_assessment>To complete the optional self assessment, please add comments to the following sections:&#13;
+&lt;ol&gt;&#13;
+&lt;li&gt;Scope/depth – What is the scope of the data? How detailed is it?&lt;/li&gt;&#13;
+&lt;li&gt;Completeness – Relative to the scope, how complete is the dataset? Completeness is the degree to which all required data is known and provided.&#13;
+  &lt;ul&gt;&#13;
+    &lt;li&gt;Do mandatory attributes have a required a value?        &#13;
+    &lt;/li&gt;&lt;li&gt;Do optional attributes have a value based on some set of conditions?&lt;/li&gt;&#13;
+    &lt;li&gt;Do inapplicable attributes (such as maiden name for a single male) have null values?&lt;/li&gt;&#13;
+    &lt;li&gt;Are data values missing, or in an unusable state?&lt;/li&gt;&#13;
+  &lt;/ul&gt;&#13;
+&lt;/li&gt;&lt;li&gt;Accuracy – Relative to the scope, how accurate is the dataset?&lt;/li&gt;&#13;
+Accuracy is the extent to which data are correct and certified free of error. It is the degree of correctness and precision with which information represents states of the real world. Accuracy refers to the difference between an estimate of a parameter and its true value.  In an open, web-based information commons, centralized procedures for assuring accuracy are not practical. Rather, OpenEI asks information providers to convince information consumers that their information is accurate by publishing data together with meta-information describing the circumstances of its creation as well as references that support verification of claims that are made.&#13;
+If a dataset contains data collected from an instrument, information about how and when the instrument was last calibrated could be included.&#13;
+&lt;li&gt;Representational consistency – Is the dataset consistent?&lt;/li&gt;&#13;
+Representational consistency is the extent to which data are represented by the same format across a dataset and data instances (values) within the dataset do not contradict each other.&#13;
+&lt;/ol&gt;&#13;
+</site:dataset_Self_assessment>
+    <site:dataset_Source_name>OECD</site:dataset_Source_name>
+    <site:dataset_Source_url rdf:resource="http://www.oecd.org/document/0,3746,en_2649_201185_46462759_1_1_1_1,00.html"/>
+    <site:dataset_Time_period>1971 - 2008</site:dataset_Time_period>
+    <site:dataset_License_type>4</site:dataset_License_type>
+    <site:dataset_License_more_info>the User can upload up to 1,500 words or 2,000 cells (equivalent to 4 tables or graphs) provided that suitable acknowledgement of OECD as source and copyright owner is given. The User must link to the OECD page where the uploaded material was taken from;</site:dataset_License_more_info>
+    <site:dataset_Terms_conditions>I agree.</site:dataset_Terms_conditions>
+    <site:dataset_Level_of_review>Some Review</site:dataset_Level_of_review>
+  </site:Dataset>
+</rdf:RDF>
