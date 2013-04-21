@@ -1,50 +1,49 @@
 <?php
 
+# loading necessary files
 require_once('includes/init.inc.php');
 
-$year_start = 1971;
-$year_end = 2008;
-$table = "energy_production";
+if(empty($_GET['queryId']))
+	$queryId=1;
+else
+	$queryId=$_GET['queryId'];
 
 
+table_index::init_for_query($queryId);
+
+$metaData = new RddfParser(table_index::$rdf);
+if($queryId==4 || $queryId==8){
+	$year_start = 2010;
+	$year_end = 2010;
+}else if ($queryId>=5 && $queryId<=7){
+	$year_start = 2009;
+	$year_end = 2009;
+}else{
+	$year_start = 1971;
+	$year_end = 2007;
+}
+
+$table = table_index::$table;
+$rdf_file = table_index::$rdf;
+
+echo "$metaData->title"." - ".str_replace('_', ' ', $table)."<br />";
 
 ?>
 
 
+<link rel = "stylesheet" href ="css/style.css" media = "all">
+<link rel = "stylesheet" href ="css/media.css" media = "screen">
 
+<link rel="stylesheet" href="jquery/jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
+<script src="jquery/jquery-1.9.1.min.js"></script>
+<script src="jquery/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="jquery/jquery-jvectormap-world-mill-en.js"></script>
+<link rel="stylesheet" href="jquery/jquery-ui.css" />
+<script src="jquery/jquery-ui.js"></script>
 
-<!DOCTYPE HTML>
-<html>
-<head>
-	<title>Template</title>
-	<meta name="viewport" content="width=device-width; initial-scale=1.0">
-	
-		
-	<link rel = "stylesheet" href ="css/style.css" media = "all">
-	<link rel = "stylesheet" href ="css/media.css" media = "screen">
-	<!-- jVector Map -->
-	<link rel="stylesheet" href="jquery/jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
-	<script src="jquery/jquery-1.9.1.min.js"></script>
-	<script src="jquery/jquery-jvectormap-1.2.2.min.js"></script>
-	<script src="jquery/jquery-jvectormap-world-mill-en.js"></script>
-	
-	
-	<!--
-	<script src="http://use.edgefonts.net/league-gothic.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
-	-->
-	
-	<link rel="stylesheet" href="jquery/jquery-ui.css" />
-	<script src="jquery/jquery-ui.js"></script>
-	
 <script>
-
 var data = new Array();
-
-
 <?
-
-
 for($year=$year_start, $id=0; $year<=$year_end; $year++, $id++){
 
 	$sql  = "SELECT ";
@@ -59,9 +58,7 @@ for($year=$year_start, $id=0; $year<=$year_end; $year++, $id++){
 	echo " };\n";
 
 }
-
 ?>
-
 
 function load_map(dataId){
 	var loadData = data[dataId];
@@ -71,7 +68,7 @@ function load_map(dataId){
 		series: {
 			regions: [{
 				values: loadData,
-				scale: ['#e1e4f6', '#090c1f'],
+				scale: ['<?php echo table_index::$light_tone_hex;?>', '<?php echo table_index::$dark_tone_hex;?>'],
 				normalizeFunction: 'polynomial'
 			}]
 			},
@@ -80,7 +77,6 @@ function load_map(dataId){
 		}
 	});
 }
-
 
 var default_value = <?=$year_start;?>;
 var min_value = <?=$year_start;?>;
@@ -104,65 +100,22 @@ $(document).ready(function(){
 });
 
 </script>
-
-
-</head>
-<header>
-	<div class="wrapper">
-		<div id="title">
-			<hgroup>
-				<h1 id="title">Green Earth</h1>
-				<h2 id="tagline">Renewable Energy Explorer</h2>
-			</hgroup>
-		</div>
-	</div>
-</header>
-<div id="main-content">
-	<div class="wrapper">
-		<div id="maps">
-		  <div id="world-map"></div>
-		  <script>
-
-      
- 
-
-  </script>
-  <div id="slider"></div>
-  <p>
-<label for="amount">Year:</label>
-<input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" />
+<style>
+	
+</style>
+<div id="world-map"></div>
+<div id="slider"></div>
+<p>
+	<label for="amount">Year:</label>
+	<input type="text" id="amount"/>
 </p>
-  </div>
-		<div id="controls">
-			<h1>Controls</h1>
-			<ul>
-				<li>
-					<ul>
-						<li><img src="images/graph.png"/></li>
-						<li>Graph</li>
-					</ul>
-				</li>
-				<li>
-					<ul>
-						<li><img src="images/data_sources.png"/></li>
-						<li>Data Sources</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		<div id="browse"></div>
-	</div>
 
-
+<hr />
 <?php
-
-$metaData = new RddfParser('node-459.rdf');
 echo "site url: ". $metaData->site_url."<br />";
-echo "title: ". $metaData->title."<br />";
-echo "body: ". $metaData->body."<br />";
+echo "body: ". strip_tags($metaData->body)."<br />";
 echo "dataset url: ". $metaData->dataset_url."<br />";
 echo "source name: ". $metaData->source_name."<br />";
 echo "source url: ". $metaData->source_url."<br />";
 echo "time period: ". $metaData->time_period."<br />";
-
 ?>

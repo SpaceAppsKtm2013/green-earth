@@ -27,3 +27,5 @@ require_once(LIB_PATH.DS.'sql_to_js_var.inc.php');
 # including rdf parser file
 require_once(LIB_PATH.DS.'rdf_praser.inc.php');
 
+# including table index to preapre sql query
+require_once(LIB_PATH.DS.'table_index.inc.php');

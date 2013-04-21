@@ -41,9 +41,13 @@ class MySQLDatabase{
 
 	private function confirm_query($result){
 		if(!$result){
-			$output = "Database query failed: " . mysql_error() . "<br />";
-			$output.= "Last SQL query: " . $this->last_query;
-			die($output);
+		
+# if you want to check sql error
+#			$output = "Database query failed: " . mysql_error() . "<br />";
+#			$output.= "Last SQL query: " . $this->last_query;
+#			die($output);
+	
+			die("Invalid! query");
 		}
 	}
 

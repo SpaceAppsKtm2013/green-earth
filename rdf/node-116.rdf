@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:site="http://en.openei.org/datasets/ns#">
+  <site:Dataset rdf:about="http://en.openei.org/datasets/node/116">
+    <site:dataset_Title>Global Energy &amp; Mining Data, World Bank (1970 - 2007)</site:dataset_Title>
+    <site:dataset_Body>&lt;span class=&quot;Apple-style-span&quot; style=&quot;border-collapse: separate; color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;&quot;&gt;&lt;span class=&quot;Apple-style-span&quot; style=&quot;color: rgb(34, 34, 34); font-family: 'Lucida Grande',Verdana,Arial,sans-serif; font-size: 13px; line-height: 18px;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;Apple-style-span&quot; style=&quot;border-collapse: separate; color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;&quot;&gt;&lt;span class=&quot;Apple-style-span&quot; style=&quot;color: rgb(34, 34, 34); font-family: 'Lucida Grande',Verdana,Arial,sans-serif; font-size: 13px; line-height: 18px;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;Apple-style-span&quot; style=&quot;border-collapse: separate; color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;&quot;&gt;&lt;span class=&quot;Apple-style-span&quot; style=&quot;color: rgb(34, 34, 34); font-family: 'Lucida Grande',Verdana,Arial,sans-serif; font-size: 13px; line-height: 18px;&quot;&gt;The&lt;span style=&quot;font-style: italic;&quot;&gt; &lt;/span&gt;&lt;a target=&quot;&quot; title=&quot;&quot; href=&quot;http://en.openei.org/datasets/files/116/pub/energy-mining_xml_en.zip&quot;&gt;energy-mining_xml_en.zip&lt;/a&gt; and &lt;a target=&quot;&quot; title=&quot;&quot; href=&quot;http://en.openei.org/datasets/files/116/pub/energy-mining_xls_en.zip&quot;&gt;energy-mining_xls_en.zip&lt;/a&gt; files contain identical data, but in different formats (XML and Excel, respectively). &amp;nbsp;In particular, each contains files with the following contents:&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;ul&gt;&lt;li&gt;Alternative and Nuclear Energy: Percentage of Total Energy Use&lt;/li&gt;&lt;li&gt;Combustible Renewables and Waste: Metric Tons of Oil Equivalent&lt;/li&gt;&lt;li&gt;Combustible Renewable and Waste: Percentage of Total Energy&lt;/li&gt;&lt;li&gt;Electric Power Consumption&lt;/li&gt;&lt;li&gt;Electric Power Transmission and Distribution Losses&lt;/li&gt;&lt;li&gt;Electric Power Transmission and Distribution Losses: Percentage of Output&lt;/li&gt;&lt;li&gt;Electricity Production from Coal Sources&lt;/li&gt;&lt;li&gt;Electricity Production from Coal Sources: Percentage of Total&lt;/li&gt;&lt;li&gt;Electricity Production from Hydroelectric Sources&lt;/li&gt;&lt;li&gt;Electricity Production from Hydroelectric Sources: Percentage of Total&lt;/li&gt;&lt;li&gt;Electricity Production from Natural Gas Sources&lt;/li&gt;&lt;li&gt;Electricity Production from Natural Gas Sources: Percentage of Total&lt;/li&gt;&lt;li&gt;Electricity Production from Nuclear Sources&lt;/li&gt;&lt;li&gt;Electricity Production from Nuclear Sources: Percentage of Total&lt;/li&gt;&lt;li&gt;Electricity Production from Oil Sources&lt;/li&gt;&lt;li&gt;Electricity Production from Oil Sources: Percentage of Total&lt;/li&gt;&lt;li&gt;Electricity Production Total&lt;br&gt;&lt;/li&gt;&lt;li&gt;Energy Imports: Net Percentage of Energy Use&lt;/li&gt;&lt;li&gt;Energy Production: Units of Oil Equivalent&lt;/li&gt;&lt;li&gt;Energy Use: Units of Oil Equivalent Per Capita&lt;/li&gt;&lt;li&gt;Energy Use: Units Oil Equivalent Per $1000 (US) of GDP&lt;/li&gt;&lt;li&gt;Fossil Fuel Energy Consumption: Percentage of Total&lt;/li&gt;&lt;li&gt;Fuel Exports: Percentage of Merchandise Exports&lt;/li&gt;&lt;li&gt;Fuel Imports: Percentage of Merchandise Imports&lt;/li&gt;&lt;li&gt;GDP Per Unit of Energy Use&lt;/li&gt;&lt;li&gt;Pump Price for Diesel Fuel&lt;br&gt;&lt;/li&gt;&lt;li&gt;Pump Price for Gasoline&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;span class=&quot;Apple-style-span&quot; style=&quot;border-collapse: separate; color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;&quot;&gt;&lt;span class=&quot;Apple-style-span&quot; style=&quot;color: rgb(34, 34, 34); font-family: 'Lucida Grande',Verdana,Arial,sans-serif; font-size: 13px; line-height: 18px;&quot;&gt;&lt;/span&gt;&lt;/span&gt;</site:dataset_Body>
+    <site:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-12-17T18:27:10Z</site:created>
+    <site:changed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-04-07T16:09:35Z</site:changed>
+    <site:dataset_Data rdf:resource="http://en.openei.org/datasets/files/116/pub/energy-mining_xml_en.zip"/>
+    <site:dataset_Data rdf:resource="http://en.openei.org/datasets/files/116/pub/energy-mining_xls_en.zip"/>
+    <site:dataset_Contributor_relationship>I accessed this dataset from a public site.</site:dataset_Contributor_relationship>
+    <site:dataset_Self_assessment>To complete the optional self assessment, please add comments to the following sections:&#13;
+&lt;ol&gt;&#13;
+&lt;li&gt;Scope/depth – What is the scope of the data? How detailed is it?&lt;/li&gt;&#13;
+&lt;li&gt;Completeness – Relative to the scope, how complete is the dataset? Completeness is the degree to which all required data is known and provided.&#13;
+  &lt;ul&gt;&#13;
+    &lt;li&gt;Do mandatory attributes have a required a value?        &#13;
+    &lt;/li&gt;&lt;li&gt;Do optional attributes have a value based on some set of conditions?&lt;/li&gt;&#13;
+    &lt;li&gt;Do inapplicable attributes (such as maiden name for a single male) have null values?&lt;/li&gt;&#13;
+    &lt;li&gt;Are data values missing, or in an unusable state?&lt;/li&gt;&#13;
+  &lt;/ul&gt;&#13;
+&lt;/li&gt;&lt;li&gt;Accuracy – Relative to the scope, how accurate is the dataset?&lt;/li&gt;&#13;
+Accuracy is the extent to which data are correct and certified free of error. It is the degree of correctness and precision with which information represents states of the real world. Accuracy refers to the difference between an estimate of a parameter and its true value.  In an open, web-based information commons, centralized procedures for assuring accuracy are not practical. Rather, OpenEI asks information providers to convince information consumers that their information is accurate by publishing data together with meta-information describing the circumstances of its creation as well as references that support verification of claims that are made.&#13;
+If a dataset contains data collected from an instrument, information about how and when the instrument was last calibrated could be included.&#13;
+&lt;li&gt;Representational consistency – Is the dataset consistent?&lt;/li&gt;&#13;
+Representational consistency is the extent to which data are represented by the same format across a dataset and data instances (values) within the dataset do not contradict each other.&#13;
+&lt;/ol&gt;&#13;
+</site:dataset_Self_assessment>
+    <site:dataset_Source_name>World Bank</site:dataset_Source_name>
+    <site:dataset_Source_url rdf:resource="http://data.worldbank.org/topic/energy-and-mining"/>
+    <site:dataset_Time_period>1970 - 2007</site:dataset_Time_period>
+    <site:dataset_License_type>4</site:dataset_License_type>
+    <site:dataset_License_more_info>Summary of Usage Terms&#13;
+----------------------&#13;
+You are free to copy, distribute, adapt, display or include the data in other products for commercial and noncommercial purposes at no cost subject to certain limitations summarized below.&#13;
+&#13;
+You must include attribution for the data you use in the manner indicated in the metadata included with the data.&#13;
+&#13;
+You must not claim or imply that The World Bank endorses your use of the data by or use The World Bank’s logo(s) or trademark(s) in conjunction with such use.&#13;
+&#13;
+Other parties may have ownership interests in some of the materials contained on The World Bank Web site. For example, we maintain a list of some specific data within the Datasets that you may not redistribute or reuse without first contacting the original content provider, as well as information regarding how to contact the original content provider. Before incorporating any data in other products, please check the list: &lt;a href=&quot;http://www.worldbank.org/terms-datasets-restricted&quot;&gt;Terms of use: Restricted Data&lt;/a&gt;.&#13;
+&#13;
+The World Bank makes no warranties with respect to the data and you agree The World Bank shall not be liable to you in connection with your use of the data.&#13;
+&#13;
+Links&#13;
+-----&#13;
+Summary of Terms: http://data.worldbank.org/summary-terms-of-use&#13;
+&#13;
+Detailed Usage Terms: http://www.worldbank.org/terms-datasets</site:dataset_License_more_info>
+    <site:dataset_Terms_conditions>I agree.</site:dataset_Terms_conditions>
+    <site:dataset_Level_of_review>Peer Reviewed</site:dataset_Level_of_review>
+  </site:Dataset>
+</rdf:RDF>

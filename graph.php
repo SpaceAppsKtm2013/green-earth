@@ -2,10 +2,30 @@
 
 require_once('includes/init.inc.php');
 
+if(empty($_GET['queryId']))
+	$queryId=1;
+else
+	$queryId=$_GET['queryId'];
+	
 
-$sql = "select energy_production.* from country_codes,energy_production where energy_production.country=country_codes.country order by `2007` desc limit 6 ";
+table_index::init_for_query($queryId);
+$table = table_index::$table;
+$year  = 2007;
+
+$metaData = new RddfParser(table_index::$rdf);
+
+$sql  = "SELECT ";
+$sql .= 	"{$table}.* ";
+$sql .= "FROM ";
+$sql .= 	"country_codes, {$table} ";
+$sql .= "WHERE ";
+$sql .= 	"{$table}.country=country_codes.country ";
+$sql .= "ORDER BY ";
+$sql .= 	"`{$year}` DESC LIMIT 5 ";
+
 $result = SQL_to_JS_var::find_by_sql($sql);
 $count = $database->num_rows($result);
+
 ?>
 
 
@@ -22,11 +42,6 @@ $count = $database->num_rows($result);
 <script type="text/javascript" src="jquery/jqplot.highlighter.js"></script>
 <script type="text/javascript" src="jquery/jqplot.cursor.js"></script>
 
-
-
-<div class=qbox id=qbox >
-
-
 <SCRIPT type="text/javascript" language="javascript">
 $(document).ready(function(){
 <?php
@@ -35,38 +50,42 @@ SQL_to_JS_var::sql_to_jqplot_var($sql);
 
 ?>
 
-  var plot1 = $.jqplot('chart1', [<?php for($i=0;$i<=$count-1; $i++) echo "line".$i.","; ?>],{
-      title:'Petrol Price',
-            legend: {show:true, location: 'se'},
-      series:[
+var plot1 = $.jqplot('chart1', [<?php for($i=0;$i<=$count-1; $i++) echo "line".$i.","; ?>],{
+	title:'<?php
+		echo "$metaData->title"." - ".str_replace('_', ' ', $table);
+		echo "<br>";
+		echo "Unit: ".table_index::$unit;
+		?>',
+	legend: {show:true, location: 'se'},
+	series:[
 		<?php SQL_to_JS_var::sql_to_jqplot_series_var($sql); ?>
-      ],
-      axes:{
-        xaxis:{
-          renderer:$.jqplot.DateAxisRenderer,
-          tickOptions:{
-            formatString:'%y'
-          } 
-        },
-        yaxis:{
-          tickOptions:{
-            formatString:'%.2f'
-            }
-        }
-      },
-      highlighter: {
-        show: true,
-        sizeAdjust: 7.5
-      },
-      cursor: {
-        show: false
-      }
-  });
+		],
+	axes:{
+		xaxis:{
+		renderer:$.jqplot.DateAxisRenderer,
+		tickOptions:{
+		formatString:'%y'
+		} 
+		},
+		yaxis:{
+		tickOptions:{
+		formatString:'%.2f'
+		}
+		}
+	},
+	highlighter: {
+		show: true,
+		sizeAdjust: 7.5
+	},
+	cursor: {
+		show: false
+	}
+	});
 });
 </SCRIPT>
 
-
-<DIV id="chart1" style="width: 95%; height: 95%; position: relative; " class="jqplot-target"></DIV>
-</div>
+<div class=qbox id=qbox >
+	<DIV id="chart1" style="width: 95%; height: 95%; position: relative; " class="jqplot-target"></DIV>
+	</div>
 </div>
 
