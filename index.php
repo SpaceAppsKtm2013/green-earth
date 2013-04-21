@@ -26,9 +26,14 @@ if($queryId==4 || $queryId==8){
 $table = table_index::$table;
 $rdf_file = table_index::$rdf;
 
-echo "$metaData->title"." - ".str_replace('_', ' ', $table)."<br />";
-
 ?>
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Green Earth</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
 
 
 <link rel = "stylesheet" href ="css/style.css" media = "all">
@@ -97,25 +102,105 @@ $(function() {
 
 $(document).ready(function(){
 	load_map(0);
+
 });
 
-</script>
-<style>
-	
-</style>
-<div id="world-map"></div>
-<div id="slider"></div>
-<p>
-	<label for="amount">Year:</label>
-	<input type="text" id="amount"/>
-</p>
 
-<hr />
-<?php
-echo "site url: ". $metaData->site_url."<br />";
-echo "body: ". strip_tags($metaData->body)."<br />";
-echo "dataset url: ". $metaData->dataset_url."<br />";
-echo "source name: ". $metaData->source_name."<br />";
-echo "source url: ". $metaData->source_url."<br />";
-echo "time period: ". $metaData->time_period."<br />";
-?>
+</script>
+
+
+	
+</head>
+<header>
+	<div class="wrapper">
+		<div id="title">
+			<hgroup>
+				<h1 id="title">Green Earth</h1>
+				<h2 id="tagline">Renewable Energy Explorer</h2>
+			</hgroup>
+		</div>
+	</div>
+</header>
+<div id="main-content">
+	<div class="wrapper">
+		<div id="maps">
+		  <div id="world-map"></div>
+
+  <div id ="slider-content">
+  <div id="slider"></div>
+	<div id="slider-data">
+		<label for="amount">Year:</label>
+		<input type="text" id="amount"/>
+	</div>
+	<div style="clear:both;"></div>
+
+</div>
+	<div id="title-des" style="font-size:15px; text-align:justify">
+	<ul>
+		<li><b><?php echo "$metaData->title"." - ".str_replace('_', ' ', $table)."<br />"; ?></b></li>
+	</ul>
+	<ul>
+		<li><?php echo strip_tags($metaData->body);?></li>
+	</ul>
+	<ul>
+		<li>Reference: <a style="color:#666" href="<?php echo $metaData->site_url;?>" target="_blank"><?php echo $metaData->site_url;?></a></li>
+	</ul>
+	</div>
+	</div>
+		<aside>
+			<div id="controls">
+				<nav>
+					<ul>
+					<?php if($queryId<=3 || $queryId>=9) { ?>
+						<li><a href="graph.php?queryId=<?php echo $queryId;?>" target="_blank">Graph</a></li>
+						<? } ?>
+						<li><a href="<?php echo 'csv'.DS.table_index::$dataset; ?>" target="_blank">Data Set</a></li>
+						<li>World Energy
+							<ul>
+								<li><a href="index.php?queryId=9">Natural Gas</a></li>
+								<li><a href="index.php?queryId=2">Energy Supply</a></li>
+								<li><a href="index.php?queryId=3">Energy Production</a></li>
+								<li><a href="index.php?queryId=10">Hydro Electricity</a></li>
+								<li><a href="index.php?queryId=11">Transmission Loss</a></li>
+								<li><a href="index.php?queryId=1">Contribution of Renewable</a></li>
+							</ul>
+						</li>
+						<li>Leading Countries
+							<ul>
+								<li><a href="index.php?queryId=7">Wind</a></li>
+								<li><a href="index.php?queryId=6">Solar</a></li>
+								<li><a href="index.php?queryId=4">Biofuel</a></li>
+								<li><a href="index.php?queryId=8">Geothermal</a></li>
+								<li><a href="index.php?queryId=5">Hydroelectricity</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+	</div>
+</div>
+<div style="clear:both"></div>
+<footer>
+	<div class="wrapper">
+	<div id="col1">
+	<a href="http://spaceappschallenge.org/"><img id="spaceapps" src="images/spaceappschallenge.png"/></a>
+	<ul>
+		<li id ="header">Thanks</li>
+		<li><a href="http://yipl.com.np/">YIPL</a></li>
+		<li><a href="http://icimod.org/">ICIMOD</a></li>
+		<li><a href="http://jvectormap.com/">jVectorMap</a></li>
+	</ul>
+	
+	<div id="col2">
+	<a href="https://github.com/SpaceAppsKtm2013/green-earth"><img src="images/Octocat.png"/></a>
+	<ul>
+		<li id ="header">Teams</li>
+		<li><a href="https://github.com/iusmaharjan">Ayush Maharjan</a></li>
+		<li><a href="https://github.com/deepsadhi">Deepak Adhikari</a></li>
+		<li><a href="http://github.com/kshitiztiwari">Kshitiz Tiwari</a></li>
+	</ul>
+	
+	</div>
+	</div>
+</footer>

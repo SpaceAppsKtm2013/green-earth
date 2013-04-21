@@ -21,7 +21,7 @@ $sql .= 	"country_codes, {$table} ";
 $sql .= "WHERE ";
 $sql .= 	"{$table}.country=country_codes.country ";
 $sql .= "ORDER BY ";
-$sql .= 	"`{$year}` DESC LIMIT 5 ";
+$sql .= 	"`{$year}` DESC LIMIT 6 ";
 
 $result = SQL_to_JS_var::find_by_sql($sql);
 $count = $database->num_rows($result);

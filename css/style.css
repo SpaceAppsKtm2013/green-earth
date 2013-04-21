@@ -221,6 +221,11 @@ aside nav li{
 	background:#f5f5f5;
 }
 
+aside nav a, aside nav a:visited{
+	color:#666;
+}
+
+
 aside nav li:hover{
 	border-left:2px solid #45CC45;
 	margin-left:-2px;
