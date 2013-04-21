@@ -4,7 +4,7 @@ require_once('includes/init.inc.php');
 
 $year_start = 1971;
 $year_end = 2008;
-$table = "energy_supply";
+$table = "energy_production";
 
 
 
@@ -20,21 +20,22 @@ $table = "energy_supply";
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 	
 		
-	<link rel = "stylesheet" href ="style.css" media = "all">
-	<link rel = "stylesheet" href ="media.css" media = "screen">
+	<link rel = "stylesheet" href ="css/style.css" media = "all">
+	<link rel = "stylesheet" href ="css/media.css" media = "screen">
 	<!-- jVector Map -->
 	<link rel="stylesheet" href="jquery/jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
 	<script src="jquery/jquery-1.9.1.min.js"></script>
 	<script src="jquery/jquery-jvectormap-1.2.2.min.js"></script>
 	<script src="jquery/jquery-jvectormap-world-mill-en.js"></script>
 	
+	
 	<!--
 	<script src="http://use.edgefonts.net/league-gothic.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
 	-->
 	
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	<link rel="stylesheet" href="jquery/jquery-ui.css" />
+	<script src="jquery/jquery-ui.js"></script>
 	
 <script>
 
@@ -151,3 +152,17 @@ $(document).ready(function(){
 		</div>
 		<div id="browse"></div>
 	</div>
+
+
+<?php
+
+$metaData = new RddfParser('node-459.rdf');
+echo "site url: ". $metaData->site_url."<br />";
+echo "title: ". $metaData->title."<br />";
+echo "body: ". $metaData->body."<br />";
+echo "dataset url: ". $metaData->dataset_url."<br />";
+echo "source name: ". $metaData->source_name."<br />";
+echo "source url: ". $metaData->source_url."<br />";
+echo "time period: ". $metaData->time_period."<br />";
+
+?>

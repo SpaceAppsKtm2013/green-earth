@@ -21,7 +21,9 @@ require_once(LIB_PATH.DS.'functions.inc.php');
 # including database files
 require_once(LIB_PATH.DS.'database.inc.php');
 
+# including sql to javascript variables file
 require_once(LIB_PATH.DS.'sql_to_js_var.inc.php');
 
-
+# including rdf parser file
+require_once(LIB_PATH.DS.'rdf_praser.inc.php');
 

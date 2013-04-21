@@ -75,7 +75,6 @@ class MySQLDatabase{
 		if(isset($this->connection)){
 			mysql_close($this->connection);
 			unset($this->connection);
-			echo "<hr /> Database closed";
 		}
 	}
 
