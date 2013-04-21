@@ -1,0 +1,11 @@
+1,contribution of renewables,node-487.rdf,contribution_of_renewables.csv,% of total energy,#043904,#baffba
+2,energy supply,node-924.rdf,energy_supply.csv,million tonnes of oil equivalent,#043904,#baffba
+3,energy production,node-924.rdf,energy_production.csv,million tonnes of oil equivalent,#043904,#baffba
+4,top_ethanol,node-463.rdf,top_ethanol.csv,million gallones,#043904,#baffba
+5,top_hydro,node-462.rdf,top_hydro.csv,billion kwh,#043904,#baffba
+6,top_solar,node-460.rdf,top_solar.csv,MW,#043904,#baffba
+7,top_wind,node-459.rdf,top_wind.csv,MW,#043904,#baffba
+8,top_geothermal,node-461.rdf,top_geothermal.csv,MW,#043904,#baffba
+9,natural_gas,node-116.rdf,natural_gas.csv,kwh,#043904,#baffba
+10,hydro_electricity,node-116.rdf,hydro_electricity.csv,kwh,#043904,#baffba
+11,transmission_loss,node-116.rdf,transmission_loss.csv,kwh,#043904,#baffba

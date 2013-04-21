@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2013 at 06:10 AM
+-- Generation Time: Apr 21, 2013 at 06:39 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -384,6 +384,40 @@ INSERT INTO `country_codes` (`code`, `country`) VALUES
 ('ZA', 'South Africa'),
 ('ZM', 'Zambia'),
 ('ZW', 'Zimbabwe');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_index`
+--
+
+CREATE TABLE IF NOT EXISTS `data_index` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `table` varchar(50) NOT NULL,
+  `rdf` varchar(30) NOT NULL,
+  `dataset` varchar(50) NOT NULL,
+  `unit` varchar(50) NOT NULL,
+  `darktone` varchar(7) NOT NULL,
+  `lighttone` varchar(7) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `data_index`
+--
+
+INSERT INTO `data_index` (`id`, `table`, `rdf`, `dataset`, `unit`, `darktone`, `lighttone`) VALUES
+(1, 'contribution of renewables', 'node-487.rdf', 'contribution_of_renewables.csv', '% of total energy', '#043904', '#baffba'),
+(2, 'energy supply', 'node-924.rdf', 'energy_supply.csv', 'million tonnes of oil equivalent', '#043904', '#baffba'),
+(3, 'energy production', 'node-924.rdf', 'energy_production.csv', 'million tonnes of oil equivalent', '#043904', '#baffba'),
+(4, 'top_ethanol', 'node-463.rdf', 'top_ethanol.csv', 'million gallones', '#043904', '#baffba'),
+(5, 'top_hydro', 'node-462.rdf', 'top_hydro.csv', 'billion kwh', '#043904', '#baffba'),
+(6, 'top_solar', 'node-460.rdf', 'top_solar.csv', 'MW', '#043904', '#baffba'),
+(7, 'top_wind', 'node-459.rdf', 'top_wind.csv', 'MW', '#043904', '#baffba'),
+(8, 'top_geothermal', 'node-461.rdf', 'top_geothermal.csv', 'MW', '#043904', '#baffba'),
+(9, 'natural_gas', 'node-116.rdf', 'natural_gas.csv', 'kwh', '#043904', '#baffba'),
+(10, 'hydro_electricity', 'node-116.rdf', 'hydro_electricity.csv', 'kwh', '#043904', '#baffba'),
+(11, 'transmission_loss', 'node-116.rdf', 'transmission_loss.csv', 'kwh', '#043904', '#baffba');
 
 -- --------------------------------------------------------
 
